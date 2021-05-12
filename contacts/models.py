@@ -11,7 +11,7 @@ class Contact(models.Model):
     class Meta:
         verbose_name = verbose_name_plural = 'Контакты'
 
-    def str(self):
+    def __str__(self):
         return self.phone
 
 
@@ -25,5 +25,5 @@ class Social(models.Model):
         verbose_name = 'Соц сеть'
         verbose_name_plural = 'Соц сети'
 
-    def str(self):
+    def __str__(self):
         return f'{self.contact.phone} at {self.name}'
